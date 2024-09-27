@@ -1,0 +1,16 @@
+Ingrese expresión postfija: 
+Apilando: 5
+[5]
+Apilando: 3
+[3, 5]
+Apilando: 4
+[4, 3, 5]
+Apilando: 12
+[12, 5]
+Apilando: 17
+[17]
+Apilando: 2
+[2, 17]
+Apilando: 15
+[15]
+La pila está vacía, por lo tanto no se puede desapilar
