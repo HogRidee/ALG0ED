@@ -12,6 +12,7 @@
 #include "Producto.h"
 #include "funcionesPila.h"
 #include "funcionesLista.h"
+#include "Funciones.h"
 
 using namespace std;
 
@@ -38,10 +39,14 @@ int main(int argc, char** argv) {
     for(int i = 0; i < 7; i++)
         insertarAlFinal(faja, productos[i]);
     
-    //imprime(faja);
-    
     for(int i = 0; i < 7; i++){
-        
+        struct Nodo *elemento = nullptr;
+        elemento = obtenerUltimoNodo(faja);
+        if(elemento != nullptr){
+            apilar(A, elemento->elemento);
+            superHanoi(A, B, C, pila);
+            desvincularUltimoNodo(faja);
+        }
     }
     
     return 0;

@@ -63,10 +63,10 @@ struct Nodo * crearNodo(struct Producto elemento, struct Nodo * siguiente) {
 //Notar que esta función retorna nulo cuando la lista es vacía
 
 /*Obtiene el último nodo de la lista*/
-struct Nodo * obtenerUltimoNodo(const struct Lista & tad) {
+struct Nodo * obtenerUltimoNodo(struct Lista & tad) {
+    if(esListaVacia(tad)) return nullptr;
     struct Nodo * ultimo = nullptr;
-    struct Nodo* recorrido = tad.cabeza;
-
+    struct Nodo * recorrido = tad.cabeza;
     while (recorrido != nullptr) {
         ultimo = recorrido;
         recorrido = recorrido->siguiente;

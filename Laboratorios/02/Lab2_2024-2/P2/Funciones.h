@@ -18,5 +18,8 @@
 
 using namespace std;
 
+void desvincularUltimoNodo(struct Lista & tad);
+void superHanoi(struct Pila &A, struct Pila &B, struct Pila &C, struct Pila &pila);
+
 #endif /* FUNCIONES_H */
 

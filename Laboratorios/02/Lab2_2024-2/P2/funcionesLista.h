@@ -16,7 +16,7 @@ void insertarAlFinal(struct Lista &, struct Producto);
 void insertarEnOrden(struct Lista &, struct Producto);
 
 struct Nodo * crearNodo(struct Producto elemento, struct Nodo *);
-struct Nodo * obtenerUltimoNodo(const struct Lista &);
+struct Nodo * obtenerUltimoNodo(struct Lista &);
 struct Nodo * obtenerNodoAnterior(const struct Lista &, struct Producto);
 struct Nodo * seEncuentra(const struct Lista &, struct Producto);
 struct Producto retornaCabeza(const struct Lista &);
