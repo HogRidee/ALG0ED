@@ -18,7 +18,7 @@
 
 using namespace std;
 
-void desvincularUltimoNodo(struct Lista & tad);
+struct Nodo *obtenerUltimo(struct Lista &lista);
 void superHanoi(struct Pila &A, struct Pila &B, struct Pila &C, struct Pila &pila);
 void hanoi(int n, struct Pila & desde, struct Pila & auxiliar, struct Pila & hacia);
 #endif /* FUNCIONES_H */

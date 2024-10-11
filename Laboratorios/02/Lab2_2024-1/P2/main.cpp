@@ -38,16 +38,20 @@ int main(int argc, char** argv) {
     
     for(int i = 0; i < 7; i++)
         insertarAlFinal(faja, productos[i]);
-    
+
     for(int i = 0; i < 7; i++){
-        struct Nodo *elemento = nullptr;
-        elemento = obtenerUltimoNodo(faja);
-        if(elemento != nullptr){
-            apilar(A, elemento->elemento);
-            superHanoi(A, B, C, pila);
-            desvincularUltimoNodo(faja);
+        struct Nodo * producto = obtenerUltimo(faja);
+        if(esPilaVacia(pila)) apilar(pila, producto->elemento);
+        else{
+            if(cima(pila).peso < producto->elemento.peso){
+                
+            }
+            else
+                apilar(pila, producto->elemento);
         }
     }
+    
+    imprimir(pila);
     
     return 0;
 }
