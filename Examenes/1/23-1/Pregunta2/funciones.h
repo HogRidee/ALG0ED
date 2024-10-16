@@ -2,7 +2,7 @@
  * File:   funciones.h
  * Author: Ivan
  *
- * Created on 15 de octubre de 2024, 17:32
+ * Created on 16 de octubre de 2024, 16:10
  */
 
 #ifndef FUNCIONES_H
@@ -10,16 +10,15 @@
 
 #include <iostream>
 
-#include "Llegada.h"
 #include "Cola.h"
 #include "funcionesLista.h"
 #include "funcionesCola.h"
+#include "Evento.h"
 
 using namespace std;
 
-void ordenarCola(struct Cola &cola, int n);
-void actualizarCola(struct Cola &cola, int n);
-void ordenarCola2(struct Cola &cola, int n);
+void encolarConPrioridad(struct Cola &cola, struct Evento evento);
+void insertarConPrioridad(struct Lista &lista, struct Evento evento);
 
 #endif /* FUNCIONES_H */
 

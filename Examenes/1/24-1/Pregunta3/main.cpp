@@ -23,7 +23,18 @@ int main(int argc, char** argv) {
         encolar(llegadas, llegadass[i]);
     }
     
-    ordenarCola(llegadas);
+    imprime(llegadas);
+    
+    int n = longitud(llegadas);
+    ordenarCola(llegadas, n);
+    
+    imprime(llegadas);
+    
+    actualizarCola(llegadas, n);
+    
+    imprime(llegadas);
+        
+    ordenarCola2(llegadas, n);
     
     imprime(llegadas);
     

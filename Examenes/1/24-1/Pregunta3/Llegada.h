@@ -10,10 +10,10 @@
 
 struct Llegada{
     int avion;
-    int horasLlegada;
-    int minutosLlegada;
-    int horasNuevo;
-    int minutosNuevo;
+    int horasLlegada = 0;
+    int minutosLlegada = 0;
+    int horasNuevo = 0;
+    int minutosNuevo = 0;
 };
 
 #endif /* LLEGADA_H */
