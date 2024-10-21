@@ -18,6 +18,11 @@ void insertarConPrioridad(struct Lista &lista, struct Evento evento){
                 nuevo->siguiente = lista.cabeza;
                 lista.cabeza = nuevo;
             }
+            else{
+                nuevo->siguiente = lista.cola3->siguiente;
+                lista.cola3->siguiente = nuevo;
+            }
+            if(lista.cola == lista.cola3) lista.cola = nuevo;
             lista.cola3 = nuevo;
         }
         else{
@@ -29,8 +34,14 @@ void insertarConPrioridad(struct Lista &lista, struct Evento evento){
                     }
                     else{
                         nuevo->siguiente = lista.cola3->siguiente;
+                        lista.cola3->siguiente = nuevo;
                     }
                 }
+                else{
+                    nuevo->siguiente = lista.cola2->siguiente;
+                    lista.cola2->siguiente = nuevo;
+                }
+                if(lista.cola == lista.cola2) lista.cola = nuevo;
                 lista.cola2 = nuevo;
             }
             else{
@@ -38,5 +49,19 @@ void insertarConPrioridad(struct Lista &lista, struct Evento evento){
                 lista.cola = nuevo;
             }
         }
+    }
+    lista.longitud++;
+}
+
+void generarNuevaCola(struct Cola &cola){
+    struct Pila pila;
+    construir(pila);
+    for(int i = 0; i < 10; i++){
+        struct Evento evento = desencolar(cola);
+        if(evento.prioridad == 1) apilar(pila, evento);
+        else encolar(cola, evento);
+    }
+    for(int i = 0; i < 5; i++){
+        
     }
 }

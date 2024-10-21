@@ -12,8 +12,8 @@ void construir(struct Lista &);
 const bool esListaVacia(const struct Lista &);
 int longitud(const struct Lista &);
 
-//void insertarAlInicio(struct Lista &, struct Evento);
-//void insertarAlFinal(struct Lista &, struct Evento);
+void insertarAlInicio(struct Lista &, struct Evento);
+void insertarAlFinal(struct Lista &, struct Evento);
 //void insertarEnOrden(struct Lista &, struct Evento);
 //
 struct Nodo * crearNodo(struct Evento elemento, struct Nodo *);

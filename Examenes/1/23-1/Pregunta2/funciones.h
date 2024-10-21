@@ -10,6 +10,8 @@
 
 #include <iostream>
 
+#include "Pila.h"
+#include "funcionesPila.h"
 #include "Cola.h"
 #include "funcionesLista.h"
 #include "funcionesCola.h"
@@ -19,6 +21,7 @@ using namespace std;
 
 void encolarConPrioridad(struct Cola &cola, struct Evento evento);
 void insertarConPrioridad(struct Lista &lista, struct Evento evento);
+void generarNuevaCola(struct Cola &cola);
 
 #endif /* FUNCIONES_H */
 

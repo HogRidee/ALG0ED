@@ -38,6 +38,7 @@ OBJECTFILES= \
 	${OBJECTDIR}/funciones.o \
 	${OBJECTDIR}/funcionesCola.o \
 	${OBJECTDIR}/funcionesLista.o \
+	${OBJECTDIR}/funcionesPila.o \
 	${OBJECTDIR}/main.o
 
 
@@ -79,6 +80,11 @@ ${OBJECTDIR}/funcionesLista.o: funcionesLista.cpp
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
 	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/funcionesLista.o funcionesLista.cpp
+
+${OBJECTDIR}/funcionesPila.o: funcionesPila.cpp
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/funcionesPila.o funcionesPila.cpp
 
 ${OBJECTDIR}/main.o: main.cpp
 	${MKDIR} -p ${OBJECTDIR}

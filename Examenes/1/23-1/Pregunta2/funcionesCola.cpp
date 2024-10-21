@@ -21,7 +21,7 @@ bool esColaVacia(const struct Cola & cola){
 }
 
 void encolar(struct Cola & cola, struct Evento elemento){
-    //insertarAlFinal(cola.lista, elemento);
+    insertarAlFinal(cola.lista, elemento);
 }
 
 struct Evento desencolar(struct Cola & cola){
@@ -37,7 +37,7 @@ struct Evento desencolar(struct Cola & cola){
 
 void imprime(const struct Cola & cola){
     if(esColaVacia(cola))
-        cout << "La cola está vacía no se puede desencolar" <<endl;
+        cout << "La cola está vacía no se puede imprimir" <<endl;
     else
         imprime(cola.lista);
 }

@@ -30,30 +30,30 @@ int longitud(const struct Lista  & lista) {
 }
 
 ///*inserta un nodo siempre al inicio de la lista*/
-//void insertarAlInicio(struct Lista & lista, struct Evento elemento) {
-//
-//    /*Se va cambiar por la función crear nodo*/
-//    struct Nodo * nuevoNodo = new struct Nodo;
-//    nuevoNodo->elemento = elemento;
-//    nuevoNodo->siguiente = lista.cabeza;
-//
-//    lista.cabeza = nuevoNodo;
-//    lista.longitud++;
-//}
+void insertarAlInicio(struct Lista & lista, struct Evento elemento) {
+
+    /*Se va cambiar por la función crear nodo*/
+    struct Nodo * nuevoNodo = new struct Nodo;
+    nuevoNodo->elemento = elemento;
+    nuevoNodo->siguiente = lista.cabeza;
+
+    lista.cabeza = nuevoNodo;
+    lista.longitud++;
+}
 //
 ///*inserta un nodo siempre al final de la lista*/
-//void insertarAlFinal(struct Lista & lista, struct Evento elemento) {
-// 
-//    struct Nodo * ultimoNodo = lista.cola;
-//    struct Nodo * nuevoNodo = crearNodo(elemento, nullptr);
-//
-//    if (ultimoNodo == nullptr) /*Si la lista está vacia*/
-//        lista.cabeza = nuevoNodo; /*se inserta en la cabeza de la lista*/
-//    else //La lista ya tiene nodos
-//        ultimoNodo->siguiente = nuevoNodo;
-//    lista.cola = nuevoNodo;
-//    lista.longitud++;
-//}
+void insertarAlFinal(struct Lista & lista, struct Evento elemento) {
+ 
+    struct Nodo * ultimoNodo = lista.cola;
+    struct Nodo * nuevoNodo = crearNodo(elemento, nullptr);
+
+    if (ultimoNodo == nullptr) /*Si la lista está vacia*/
+        lista.cabeza = nuevoNodo; /*se inserta en la cabeza de la lista*/
+    else //La lista ya tiene nodos
+        ultimoNodo->siguiente = nuevoNodo;
+    lista.cola = nuevoNodo;
+    lista.longitud++;
+}
 //
 ///*Crea un nuevo nodo con los datos dados como parámetros*/
 struct Nodo * crearNodo(struct Evento elemento, struct Nodo * siguiente) {
@@ -220,6 +220,7 @@ void imprime(const struct Lista & lista) {
                 cout << ", ";
             estaImprimiendoLaCabeza = 0;
             cout << recorrido->elemento.prioridad;
+            cout << " " << recorrido->elemento.codigo;
             recorrido = recorrido->siguiente;
         }
         cout << "]" << endl;

@@ -11,6 +11,7 @@
 struct Evento{
     char codigo[8];
     int prioridad;
+    int ordenRegistro;
 };
 
 #endif /* EVENTO_H */
