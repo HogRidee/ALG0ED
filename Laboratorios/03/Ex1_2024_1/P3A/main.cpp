@@ -28,12 +28,14 @@ int main(int argc, char** argv) {
         cout << riesgo[i] << " ";
     }
     cout << "por nivel de riesgo" << endl;
+    mergeSort(impacto, id, riesgo, 0, n-1);
     for(int i = 0; i < n; i++){
         cout << id[i] << "-";
         cout << impacto[i] << "-";
         cout << riesgo[i] << " ";
     }
     cout << "por impacto" << endl;
+    mergeSort(id, riesgo, impacto, 0, n-1);
     for(int i = 0; i < n; i++){
         cout << id[i] << "-";
         cout << impacto[i] << "-";
