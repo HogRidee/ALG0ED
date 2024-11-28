@@ -40,6 +40,7 @@ int main(int argc, char** argv) {
     
     actualizarCantidadNodos(arbol);
     recorridoPorNivel(arbol);
+    cout << endl;
     
     char nodoEliminar = 'D';
     eliminaSubArbol(arbol, nodoEliminar);
